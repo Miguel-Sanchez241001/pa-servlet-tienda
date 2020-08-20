@@ -40,11 +40,26 @@ header {
     grid-template-columns: 150px auto 150px;
     grid-template-rows: auto;
 }
-#sec {
+
+#secction-main-login {
+    margin-top: 50px;
     display: grid;
-    grid-template-columns: 150px auto 150px;
+    grid-template-columns: auto 300px auto;
     grid-template-rows: auto;
 }
+#login {
+    border: 2px solid #2f35c0;
+}
+#form-login {
+    padding: 15px;
+}
+#form-login > input,label, button {
+    margin: 10px;
+}
+.text-error {
+    color: #ff1c0a;
+}
+
 /**** Tabla de trabajadores*/
 #table-trabajadores {
     font-family: 'Roboto', sans-serif;
@@ -54,19 +69,6 @@ header {
     border: 1px solid black;
 }
 #table-trabajadores th, #table-trabajadores td {
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-}
-#table-traba {
-    font-family: 'Roboto', sans-serif;
-    font-size: 13px;
-}
-#table-traba #table-traba th, #table-traba td {
-    border: 1px solid black;
-}
-#table-traba th, #table-traba td {
     padding-left: 10px;
     padding-top: 5px;
     padding-right: 10px;

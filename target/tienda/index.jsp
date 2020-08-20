@@ -6,6 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%!
+String username, message;
+
+%>
+<%
+    username = (String) request.getAttribute("username");
+    message = (String) request.getAttribute("message");
+%>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -15,16 +23,41 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav id="header-nav">
-    <div id="header-logo">
-        <a href="prueba-uno.jsp">Store</a>
-    </div>
-    <ul id="nav-menu">
-        <li><a href="showclientes">Clientes</a></li>
-        <li><a href="showproductos">Productos</a></li>
-        <li><a href="showventas">Ventas</a></li>
-    </ul>
-</nav>
+
+<header>
+
+</header>
+<main>
+    <section id="secction-main-login">
+        <div>.</div>
+        <div id="login">
+            <h3>Sign in</h3> <br>
+            <%
+                if( message != null ) {
+            %>
+            <p class="text-error"><%=message%></p>
+            <%
+                }
+            %>
+            <form id="form-login" action="singin" method="post">
+
+                <label for="username">Usuario: </label>
+                <input type="text" name="username" id="username" placeholder="Ingrese el username"
+                       value="<%=(username!=null ? username : "")%>"><br>
+                <label for="password">Contraseña: </label>
+                <input type="password" name="password" id="password">
+
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+        <div>
+            .
+        </div>
+    </section>
+</main>
+<footer>
+
+</footer>
 
 </body>
 </html>
