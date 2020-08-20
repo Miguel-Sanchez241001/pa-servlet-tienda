@@ -1,0 +1,113 @@
+* {
+    /*border: solid 1px red;*/
+    padding: 0px;
+    margin: 0px;
+}
+header {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+#header-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    font-weight: bold;
+    color: black;
+    height: 60px;
+}
+#header-logo {
+    font-size: 25px;
+    color: #7a3cff;
+}
+#nav-menu {
+    display: flex;
+    justify-content: space-around;
+    min-width: 50%;
+}
+#nav-menu li {
+    list-style: none;
+}
+#nav-menu li a {
+    text-decoration: none;
+    color: black;
+}
+#nav-menu li a:hover {
+    color: #7a3cff;
+}
+#secction-main {
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    grid-template-rows: auto;
+}
+#sec {
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    grid-template-rows: auto;
+}
+/**** Tabla de trabajadores*/
+#table-trabajadores {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+#table-trabajadores, #table-trabajadores th, #table-trabajadores td {
+    border: 1px solid black;
+}
+#table-trabajadores th, #table-trabajadores td {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+#table-traba {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+#table-traba #table-traba th, #table-traba td {
+    border: 1px solid black;
+}
+#table-traba th, #table-traba td {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+.table-collapse {
+    border-collapse: collapse;
+}
+.a-button {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.a-button-new {
+    position: absolute;
+    padding: 10px 15px;
+    margin-top: 10px;
+    color: #7a3cff;
+    border: 1px solid #7a3cff;
+}
+.a-button-new:hover {
+    color: white;
+    background-color: #7a3cff;
+}
+.a-button-edit {
+    padding: 3px 10px;
+    color: #63b458;
+    border: 1px solid #63b458;
+}
+.a-button-edit:hover {
+    color: white;
+    background-color: #63b458;
+}
+
+.a-button-del {
+    padding: 3px 10px;
+    color: #ff1c0a;
+    border: 1px solid #ff1c0a;
+}
+.a-button-del:hover {
+    color: white;
+    background-color: #ff1c0a;
+}
