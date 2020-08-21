@@ -19,6 +19,8 @@ import java.util.Optional;
 @WebServlet(name = "SaveEditVentaServlet",urlPatterns = "/saveventaedit")
 public class SaveEditVentaServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ValidSession.valid(request, response);
+
         Integer id = Integer.parseInt( request.getParameter("id") );
         String clienteId = request.getParameter("clienteId");
         String productoId = request.getParameter("productoId");

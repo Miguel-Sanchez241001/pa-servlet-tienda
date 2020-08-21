@@ -14,6 +14,8 @@ import java.io.IOException;
 @WebServlet(name = "SaveEditProductoServlet",urlPatterns = "/saveproductoedit")
 public class SaveEditProductoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ValidSession.valid(request, response);
+
         Integer id = Integer.parseInt( request.getParameter("id") );
         String descripcion = request.getParameter("descripcion");
         Integer stock = Integer.parseInt(request.getParameter("stock"));

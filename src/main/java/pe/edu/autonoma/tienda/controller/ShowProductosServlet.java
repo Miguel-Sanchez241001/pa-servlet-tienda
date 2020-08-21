@@ -16,6 +16,8 @@ import java.util.List;
 @WebServlet(name = "ShowProductosServlet", urlPatterns = "/showproductos")
 public class ShowProductosServlet extends HttpServlet {
     protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ValidSession.valid(request, response);
+
         List<Producto> productos = new ArrayList<>();
         try{
             ProductoDao dao = new ProductoDao();

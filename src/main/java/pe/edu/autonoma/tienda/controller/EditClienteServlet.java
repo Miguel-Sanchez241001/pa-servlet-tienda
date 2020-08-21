@@ -19,6 +19,8 @@ public class EditClienteServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ValidSession.valid(request, response);
+
         Integer id = Integer.parseInt( request.getParameter("id") );
         RequestDispatcher requestDispatcher = null;
 

@@ -14,6 +14,8 @@ import java.io.IOException;
 @WebServlet(name = "SaveEditClienteServlet",urlPatterns = "/saveclienteedit")
 public class SaveEditClienteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ValidSession.valid(request, response);
+
         Integer id = Integer.parseInt( request.getParameter("id") );
         String apellidoNombre = request.getParameter("apellidoNombre");
         String tipoDocumento = request.getParameter("tipoDocumento");

@@ -17,6 +17,7 @@ import java.util.List;
 public class ShowClientesServlet extends HttpServlet {
     protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        ValidSession.valid(request, response);
 
         List<Cliente> clientes = new ArrayList<>();
         try{

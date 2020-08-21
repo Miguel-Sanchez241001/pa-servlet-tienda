@@ -9,12 +9,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Optional;
 
 @WebServlet(name = "SingInServlet",urlPatterns = "/singin")
 public class SingInServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession sesion = request.getSession(true);
         RequestDispatcher requestDispatcher;
         UsuarioDao usuarioDao = new UsuarioDao();
 
@@ -26,7 +28,8 @@ public class SingInServlet extends HttpServlet {
         if(optionalUsuario.isPresent()) {
             Usuario usuario = optionalUsuario.get();
             if( usuario.getPassword().equals(password) ) {
-
+                sesion.setAttribute("username", username);
+                sesion.setAttribute("key", "dsjhf.FDS!543|5G*DFgfdrhd%#454GDfgDb"+username);
 
                 requestDispatcher = request.getRequestDispatcher("dashboard.jsp");
                 requestDispatcher.forward(request, response);
