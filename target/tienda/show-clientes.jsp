@@ -79,52 +79,7 @@
             .
         </div>
     </section>
-    <section id="sec">
-        <div>.</div>
-        <div>
-            <h2>Clientes</h2>
-            <table id="table-traba" class="table-collapse">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Nombre Apellido</th>
-                    <th>Tipo documento</th>
-                    <th>Numero de documento</th>
-                    <th>Direccion</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <%
-                    for (Cliente clientes: clientes) {
-                %>
-                <tr>
-                    <td><%=clientes.getId()%></td>
-                    <td><%=clientes.getApellidoNombre()%></td>
-                    <td><%=clientes.getTipoDocumento()%></td>
-                    <td><%=clientes.getNumeroDocumento()%></td>
-                    <td><%=clientes.getDireccion()%></td>
-                    <td>
-                        <a href="editcliente?id=<%=clientes.getId()%>" class="a-button a-button-edit">Editar</a>
-                    </td>
-                    <td>
-                        <a href="deletecliente?id=<%=clientes.getId()%>" class="a-button a-button-del">Borrar</a>
-                    </td>
-                </tr>
-                <%
-                    }
-                %>
-                </tbody>
-                <tfoot></tfoot>
-            </table>
 
-            <a href="new-cliente.jsp" class="a-button a-button-new">Nuevo Cliente</a>
-        </div>
-        <div>
-            .
-        </div>
-    </section>
 </main>
 
 </body>
